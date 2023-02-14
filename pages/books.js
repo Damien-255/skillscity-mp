@@ -1,5 +1,5 @@
 import BookGrid from "@/components/books/books-grid";
-import Link from "next/Link";
+import Link from "next/link";
 
 export default function BOOKsPage() {
     return (
@@ -16,5 +16,4 @@ export default function BOOKsPage() {
         </div>
 
     )
-
 }
