@@ -1,12 +1,11 @@
+import Hero from "@/components/home/hero";
+import Topics from "@/components/home/topics";
+import Content from "@/components/shared/content";
+import Footer from "@/components/shared/footer";
+import Header from "@/components/shared/header";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import Header from "@/components/shared/header";
-import Footer from "@/components/shared/footer";
-import Content from "@/components/shared/content";
-import  Hero  from "@/components/home/hero";
-import Topics from "@/components/home/topics";
-
 
 export default function Home() {
   const router = useRouter();
@@ -30,7 +29,7 @@ export default function Home() {
        <Hero
          imgUrl="/assets/damienrileyjpeg.jpeg"
          title="Damien"
-         subtitle="I am a bootcamp studemt"
+         subtitle="I am a bootcamp student"
        
        />
 
@@ -39,11 +38,11 @@ export default function Home() {
 
            <Topics />
 
-         <div>
+         <div className="hidden md:block">
          <button
             className="bg-blue-500 px-2 py-1 rounded mt-5"
             onClick={handleClick}
-            >
+          >
 
             Click me!!!
 
