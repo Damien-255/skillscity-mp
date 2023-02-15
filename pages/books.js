@@ -4,7 +4,7 @@ import Link from "next/link";
 import Footer from "@/components/shared/footer";
 import Content from "@/components/shared/content";
 
-export default function BOOKsPage() {
+export default function BooksPage() {
     return (
         <div className="w-full">
             <Header name="Books"/>
