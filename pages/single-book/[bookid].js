@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 export default function SingleBook() {
     const router = useRouter();
-    const [book, setBook] = useState(null);
+    const  [book, setBook] = useState(null);
     const { bookId } = router.query;
 
     useEffect(() => {
