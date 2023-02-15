@@ -3,6 +3,9 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import Header from "@/components/shared/header";
 import Footer from "@/components/shared/footer";
+import Content from "@/components/shared/content";
+import  Hero  from "@/components/home/hero";
+import Topics from "@/components/home/topics";
 
 
 export default function Home() {
@@ -24,14 +27,32 @@ export default function Home() {
     <div className="w-full">
        <Header name="Home"/>
 
-       <button
-         className="bg-blue-500 px-2 py-1 rounded"
-         onClick={handleClick}
-         >
+       <Hero
+         imgUrl="/assets/damienrileyjpeg.jpeg"
+         title="Damien"
+         subtitle="I am a bootcamp studemt"
+       
+       />
 
-           Click me!!!
+       <Content>
+         <div className="w-full flex flex-col">
+
+           <Topics />
+
+         <div>
+         <button
+            className="bg-blue-500 px-2 py-1 rounded mt-5"
+            onClick={handleClick}
+            >
+
+            Click me!!!
 
          </button>
+         </div>
+         </div>
+       </Content>
+
+       
 
     <Footer href="/books" title="Books page" />
     </div>     
