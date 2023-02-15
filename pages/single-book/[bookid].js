@@ -1,10 +1,12 @@
 import Hero from "@/components/home/hero";
+import Footer from "@/components/shared/footer";
+import Header from "@/components/shared/header";
 import { useRouter } from "next/router"
 import { useEffect, useState } from "react";
 
 export default function SingleBook() {
     const router = useRouter();
-    const  [book, setBook] = useState(null);
+    const [book, setBook] = useState(null);
     const { bookId } = router.query;
 
     useEffect(() => {
