@@ -1,4 +1,5 @@
 export default function handler(req, res) {
+    const id = req.query.id;
 
     const books = [
         { 
@@ -20,8 +21,17 @@ export default function handler(req, res) {
           imgUrl: "/assets/3.png"
         },
      
-     ];
+    ];
 
-    res.json(books);
+    const foundBook = books.find((book) => {
+        if (book.id === id) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    });
+
+    res.json({ book: foundBook });
 
 }
