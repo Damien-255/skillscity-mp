@@ -1,19 +1,17 @@
 import BookGrid from "@/components/books/books-grid";
+import Header from "@/components/shared/header";
 import Link from "next/link";
+import Footer from "@/components/shared/footer";
 
 export default function BOOKsPage() {
     return (
-        <div className="bg-green-100">
-            Books page
-
-            <BookGrid />
-
-            <div>
-                <Link href="/">
-                    Go to home page 
-                </Link>
+        <div className="w-full">
+            <Header name="Books"/>
+            <div className="w-full max-w-6xl mx-auto mt-8">
+                <BookGrid />
             </div>
-        </div>
 
-    )
+            <Footer title="Home page" href="/"/>
+        </div>
+    );
 }
